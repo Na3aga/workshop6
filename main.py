@@ -80,22 +80,21 @@ def reg_incgroups_number():
 
     x=list(inc_and_children.keys())
 
-    trace_no = go.Bar(
+    trace_yes = go.Bar(
         name='one+ child',
         x=x,
-        y=[list(i.values())[0] for i in list(inc_and_children.values())],
-        text=[list(i.keys())[0] for i in list(inc_and_children.values())],
+        y=[int(i['Yes']) for i in list(inc_and_children.values())],
+        text=['Have kids' for i in list(inc_and_children.values())],
         textposition='auto',
         marker=dict(
             color='rgb(49,130,189)'
         )
     )
-    trace_yes = go.Bar(
+    trace_no = go.Bar(
         name='No children',
         x=x,
-        y=[list(i.values())[1] for i in list(inc_and_children.values())],
-        text=[list(i.keys())[1] for i in list(inc_and_children.values())],
-
+        y=[int(i['No']) for i in list(inc_and_children.values())],
+        text=['No kids' for i in list(inc_and_children.values())],
         textposition='auto',
         marker=dict(
             color='rgb(204,204,204)',
