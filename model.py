@@ -6,6 +6,7 @@
 import pandas as pd
 import csv
 
+
 def get_dataset(stop=100):
     dataset = dict() 
     with open("nyserda.csv",'r') as f:
