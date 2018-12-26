@@ -4,7 +4,7 @@ import plotly.graph_objs as go
 from model import get_dataset
 from collections import Counter
 
-dataset = get_dataset(220000)
+dataset = get_dataset(223000)
 income_groups = set(dataset.keys())
 
 
@@ -87,7 +87,7 @@ def reg_incgroups_number():
         text=['Have kids' for i in list(inc_and_children.values())],
         textposition='auto',
         marker=dict(
-            color='rgb(49,130,189)'
+            color='rgb(255, 104, 0)'
         )
     )
     trace_no = go.Bar(
@@ -97,7 +97,7 @@ def reg_incgroups_number():
         text=['No kids' for i in list(inc_and_children.values())],
         textposition='auto',
         marker=dict(
-            color='rgb(204,204,204)',
+            color='rgb(248, 33, 68)',
         )
     )
 
